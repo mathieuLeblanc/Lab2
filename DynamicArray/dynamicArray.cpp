@@ -37,6 +37,7 @@ void DynamicArray::setElement(unsigned int _index, int _valeur)
 
 int DynamicArray::getElement(unsigned int _index)
 {
+	if (_index < 0 || _index > capacite) throw out_of_range("pas bien");
 	return tabElements[_index];
 }
 
